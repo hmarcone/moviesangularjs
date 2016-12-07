@@ -1,0 +1,26 @@
+﻿<div ng-controller="editCtrl">
+	<form ng-show="isEdit()">
+		<fieldset>
+			<div class="form-group">
+				<label for="titulo">
+					Título
+				</label>
+				<input id="titulo" type="text" ng-model="edit.movie.Title" required class="form-control" />
+			</div>
+			<div class="form-group">
+				<label for="anoLancamento">
+					Ano de Lançamento
+				</label>
+				<input id="anoLancamento" type="number" ng-model="edit.movie.LaunchYear" required min="1900" max="2050" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label for="duracao">
+					Duração
+				</label>
+				<input id="duracao" type="number" ng-model="edit.movie.Duration" required min="10" max="500" class="form-control" />
+			</div>
+			<button class="btn btn-primary" ng-click="save()">Salvar</button>
+			<button class="btn btn-danger" ng-click="cancel()">Cancelar</button>
+		</fieldset>
+	</form>
+</div>
